@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Daily</string>
+    <string name="menu_settings">Settings</string>
+
+    <!--新闻分类-->
+    <string name="category_top">Headlines</string>
+    <string name="category_shehui">Society</string>
+    <string name="category_guonei">Domestic</string>
+    <string name="category_guoji">International</string>
+    <string name="category_yule">Entertainment</string>
+    <string name="category_tiyu">Sports</string>
+    <string name="category_junshi">Military</string>
+    <string name="category_keji">Technology</string>
+    <string name="category_caijing">Economic</string>
+    <string name="category_shishang">Fashing</string>
+
+    <!--others-->
+    <string name="on_developing">the feature is on developing due to my skills or android developing is my part-time job without income</string>
+    <string name="OK">OK</string>
+
+</resources>
