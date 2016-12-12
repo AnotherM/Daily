@@ -1,26 +1,13 @@
 package anotherm4.daily.utils;
 
-import android.os.Message;
-import android.util.Log;
-import android.widget.Toast;
-
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import anotherm4.daily.adapter.ViewPagerAdapter;
 
-/**
- * Created by Another.M on 2016/11/25.
- */
-
-class RequestUtil {
-    //private String url = ViewPagerAdapter.REQUEST_URL;
-
+class ConnectionUtil {
     String request(String strUrl, String method) throws Exception {
         HttpURLConnection conn;
         BufferedReader reader;
@@ -49,6 +36,8 @@ class RequestUtil {
         reader.close();
         return rs;
     }
+
+
 /*
     public void requestTest() {
         try {

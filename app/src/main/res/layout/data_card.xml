@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/data_item"
     android:layout_width="match_parent"
@@ -10,6 +9,7 @@
     android:layout_marginRight="@dimen/margin_16dp"
     android:layout_marginTop="@dimen/margin_8dp"
     android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@drawable/translationz"
     tools:ignore="ALL">
 
     <LinearLayout
@@ -39,9 +39,11 @@
 
             <ImageView
                 android:id="@+id/data_menu"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_more_light_24dp" />
         </LinearLayout>
 
@@ -56,14 +58,14 @@
                 android:layout_margin="@dimen/margin_8dp"
                 android:layout_weight="1"
                 android:text="title"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <ImageView
-                android:scaleType="centerCrop"
                 android:id="@+id/data_image"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_margin="@dimen/margin_8dp"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/ic_launcher" />
         </LinearLayout>
         <!--内容功能，待开发

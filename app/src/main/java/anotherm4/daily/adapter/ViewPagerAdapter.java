@@ -3,16 +3,15 @@ package anotherm4.daily.adapter;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import anotherm4.daily.R;
 import anotherm4.daily.fragment.ViewPagerFragment;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private Context context;
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     private static final String APP_KEY = "db9f990cff415702e640d2dfd845f758";
     public static String REQUEST_URL;
+    private Context context;
 
     public ViewPagerAdapter(FragmentManager fm,Context context) {
         super(fm);
@@ -53,7 +52,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 REQUEST_URL = "http://v.juhe.cn/toutiao/index?type=shishang&key=" + APP_KEY;
                 break;
         }
-        return ViewPagerFragment.newInstance();
+        return new ViewPagerFragment();
     }
 
     @Override

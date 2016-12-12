@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "965317832439",
+    "firebase_url": "https://daily-20e9e.firebaseio.com",
+    "project_id": "daily-20e9e",
+    "storage_bucket": "daily-20e9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965317832439:android:2cbb56374f275b68",
+        "android_client_info": {
+          "package_name": "anotherm4.daily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965317832439-9tc5f2fqaqnmf86suh8tuq3mcpj1vv1l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATLCJDhc4E2yMXrbJqFXlqC2Qquz2lyF4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
