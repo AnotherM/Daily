@@ -14,10 +14,9 @@
     <string name="category_yule">娱乐</string>
     <string name="on_developing">其他功能正在开发中</string>
     <string name="OK">确定</string>
-    <string name="donate">由于收入较低，所以可能很慢，请谅解,如果你觉得这个对你来说可能有用，帮我买杯咖啡吧。</string>
-    <string name="paypal">Paypal</string>
-    <string name="source_code">你可以在这里找到源代码</string>
-    <string name="alipay">支付宝</string>
+    <string name="source_code">如果你对这个小程序感兴趣，你可以在这里找到源代码</string>
     <string name="hide_ads">隐藏广告（仅此次）</string>
     <string name="show_ads">显示广告</string>
+    <string name="about_no">算了吧</string>
+    <string name="about_yes">带我去</string>
 </resources>

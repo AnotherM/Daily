@@ -16,10 +16,7 @@
 
     <!--others-->
     <string name="on_developing">other feature is on developing</string>
-    <string name="donate">because of lower income,it may be slow,please understand,if you feel this app may be usful for you,help me with a cup of coffee</string>
-    <string name="source_code">You can find the source code here</string>
-    <string name="alipay">Alipay</string>
-    <string name="paypal">Paypal</string>
+    <string name="source_code">If you interesting in this little app,ou can find the source code here</string>
     <string name="OK">OK</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-4522566152785892/6112877561</string>
 
@@ -30,4 +27,6 @@
   <string name="night_mode">Night mode</string>
    <string name="day_mode">Day mode</string>-->
 
+    <string name="about_yes">Take me to</string>
+    <string name="about_no">Forget it</string>
 </resources>

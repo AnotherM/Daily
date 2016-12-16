@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAnalytics firebaseAnalytics;
     private AdView adView;
     private Boolean isShowAds = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,23 +66,16 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.menu_about) {
             new AlertDialog.Builder(this)
                     .setTitle(R.string.on_developing)
-                    .setMessage(R.string.donate)
-                    .setPositiveButton(R.string.alipay, new DialogInterface.OnClickListener() {
+                    .setMessage(R.string.source_code)
+                    .setPositiveButton(R.string.about_yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setData(Uri.parse("https://d.alipay.com/i/index.htm?b=RECEIVE_AC&u=CG7pUdmtX99kGMA+RC9Z27yceBek0RNhNasoDnOL7AQ="));
+                            intent.setData(Uri.parse("https://github.com/AnotherM/Daily"));
                             startActivity(intent);
                         }
                     })
-                    .setNegativeButton(R.string.paypal, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setData(Uri.parse("https://www.paypal.me/anotherm4"));
-                            startActivity(intent);
-                        }
-                    })
+                    .setNegativeButton(R.string.about_no, null)
                     .show();
             return true;
         }
