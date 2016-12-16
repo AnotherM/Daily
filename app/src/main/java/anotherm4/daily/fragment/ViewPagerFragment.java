@@ -29,7 +29,6 @@ public class ViewPagerFragment extends Fragment {
         String img3 = bundle.getString("Img3");
         String url = bundle.getString("url");
         */
-
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_main);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.pg_main);
