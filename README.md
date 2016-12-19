@@ -9,6 +9,5 @@
 
 ---
 
-*PS:支付宝功能待验证中*
 
 ~~如果你真的想捐助我，欢迎访问[Paypal.me](https://www.paypal.me/anotherm4)，或者联系<another.milk4@gmail.com>~~
