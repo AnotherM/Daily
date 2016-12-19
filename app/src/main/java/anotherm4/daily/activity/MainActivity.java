@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 
         adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()/*.addTestDevice("2DD6262B2D035877E1956E7FAA2DA2CE") Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("2DD6262B2D035877E1956E7FAA2DA2CE") /*Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
         adView.loadAd(adRequest);
     }
 
