@@ -1,5 +1,6 @@
 package anotherm4.daily.activity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -24,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAnalytics firebaseAnalytics;
     private AdView adView;
     private Boolean isShowAds = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 
         adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("2DD6262B2D035877E1956E7FAA2DA2CE") /*Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("60BF7651283D36A74993FC32E4F57F7F")/* Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
         adView.loadAd(adRequest);
     }
 
@@ -68,17 +72,21 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle(R.string.on_developing)
                     .setMessage(R.string.source_code)
                     .setPositiveButton(R.string.about_yes, new DialogInterface.OnClickListener() {
+                        @SuppressLint("SetJavaScriptEnabled")
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Intent intent = new Intent(Intent.ACTION_VIEW);
                             intent.setData(Uri.parse("https://github.com/AnotherM/Daily"));
                             startActivity(intent);
+
                         }
                     })
                     .setNegativeButton(R.string.about_no, null)
                     .show();
+
             return true;
         }
+
         if (id == R.id.menu_hide_ads) {
 
             if (isShowAds) {
@@ -94,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     public void onResume() {
         super.onResume();
     }
+
 }

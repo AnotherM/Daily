@@ -21,7 +21,6 @@ import anotherm4.daily.bean.DataBean;
 
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    public InputStream imgUrl;
     private Context context;
     private List<DataBean> dataBeanList;
 
@@ -95,18 +94,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 public void onClick(View view) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(dataBeanList.get(getAdapterPosition()).getWebUrl()));
-                    /*
-                    Bundle bundle = new Bundle();
-                    bundle.putString("Author", dataBeanList.request(getAdapterPosition()).getAuthor());
-                    bundle.putString("Title", dataBeanList.request(getAdapterPosition()).getTitle());
-                    intent.putExtra("Content",dataBeanList.request(getAdapterPosition()))待开发
-                    bundle.putString("Date", dataBeanList.request(getAdapterPosition()).getDate());
-                    bundle.putString("Img1", dataBeanList.request(getAdapterPosition()).getImg1Url());
-                    bundle.putString("Img2", dataBeanList.request(getAdapterPosition()).getImg2Url());
-                    bundle.putString("Img3", dataBeanList.request(getAdapterPosition()).getImg3Url());
-                    bundle.putString("url", dataBeanList.request(getAdapterPosition()).getWebUrl());
-                    intent.putExtras(bundle);
-                    */
                     context.startActivity(intent);
                 }
             });
