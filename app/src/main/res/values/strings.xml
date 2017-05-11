@@ -16,7 +16,7 @@
 
     <!--others-->
     <string name="on_developing">other feature is on developing</string>
-    <string name="source_code">If you interesting in this little app,ou can find the source code here</string>
+    <string name="source_code">If you interesting in this little app,ou can find the source code here: https://github.com/AnotherM/Daily\n\t\tThe data source is belong to JuheAPI: https://www.juhe.cn/docs/api/id/235, so the content does not have any association with my app, but I still thanks to JuheAPI</string>
     <string name="OK">OK</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-4522566152785892/4976587963</string>
 
@@ -27,6 +27,5 @@
   <string name="night_mode">Night mode</string>
    <string name="day_mode">Day mode</string>-->
 
-    <string name="about_yes">Take me to</string>
-    <string name="about_no">Forget it</string>
+    <string name="about_yes">I know</string>
 </resources>
