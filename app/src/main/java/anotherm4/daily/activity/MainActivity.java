@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.view_container);
+        ViewPager viewPager = findViewById(R.id.view_container);
         viewPager.setOffscreenPageLimit(1);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         ViewPagerAdapter ViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), this);
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "event_type");
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 
-        adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()/* Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("60BF7651283D36A74993FC32E4F57F7F")/* Add your device id here, you can find it in the logcat,or modify the ad unit id in the string.xml*/.build();
         adView.loadAd(adRequest);
     }
 

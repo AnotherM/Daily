@@ -2,12 +2,12 @@ package anotherm4.daily.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
 import anotherm4.daily.R;
 import anotherm4.daily.adapter.ViewPagerAdapter;
@@ -30,10 +30,10 @@ public class ViewPagerFragment extends Fragment {
         String img3 = bundle.getString("Img3");
         String url = bundle.getString("url");
         */
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.rv_main);
+        RecyclerView recyclerView = rootView.findViewById(R.id.rv_main);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.pg_main);
-        new AsyncUtil(getContext(), progressBar, recyclerView).execute(ViewPagerAdapter.REQUEST_URL);
+        SwipeRefreshLayout swipeRefreshLayout = rootView.findViewById(R.id.swipe_refresh);
+        new AsyncUtil(getContext(), swipeRefreshLayout, recyclerView).execute(ViewPagerAdapter.REQUEST_URL);
 
         return rootView;
     }
