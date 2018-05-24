@@ -2,7 +2,6 @@ package anotherm4.daily.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,8 +31,7 @@ public class ViewPagerFragment extends Fragment {
         */
         RecyclerView recyclerView = rootView.findViewById(R.id.rv_main);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        SwipeRefreshLayout swipeRefreshLayout = rootView.findViewById(R.id.swipe_refresh);
-        new AsyncUtil(getContext(), swipeRefreshLayout, recyclerView).execute(ViewPagerAdapter.REQUEST_URL);
+        new AsyncUtil(getContext(), recyclerView).execute(ViewPagerAdapter.REQUEST_URL);
 
         return rootView;
     }
